@@ -3,39 +3,13 @@ import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 
+import Card from '../components/Cards'
+import So from '../assets/img/decoration/so.png';
+import Download from '../assets/img/decoration/download.png';
+
+import { Sponsors } from '../utils/data'
 import { Container } from '../styles/pages/Home';
 
-import Kde from '../assets/img/sponsors/kde.png';
-import Plasma from '../assets/img/sponsors/plasma.png';
-import Linux from '../assets/img/sponsors/linux.png';
-import Debian from '../assets/img/sponsors/debian.png';
-import Ubuntu from '../assets/img/sponsors/ubuntu.png';
-
-import So from '../assets/img/decoration/so.png';
-
-
-const Sponsors = [
-    {
-        alt: 'Kde',
-        path: Kde,
-    },
-    {
-        alt: 'Plasma',
-        path: Plasma,
-    },
-    {
-        alt: 'Linux',
-        path: Linux,
-    },
-    {
-        alt: 'Debian',
-        path: Debian,
-    },
-    {
-        alt: 'Ubuntu',
-        path: Ubuntu,
-    },
-]
 
 const Home: React.FC = () => {
   return(
@@ -67,6 +41,30 @@ const Home: React.FC = () => {
                         </p>
                     </div>
                 </div>
+            </div>
+            <div className="features">
+                <div className="cards">
+                    <Card/>
+                </div>
+            </div>
+            <div className="quite-content">
+                <div className="suspense-content">
+                    <h1>Sistemas de arquivos suportados </h1>
+                </div>
+                <div className="informative">
+                    <h2>O Estilo do Kubuntu</h2>
+                    <div className="line">.</div>
+                    <p>O Plasma foi criado para não o incomodar e o ajudar a terminar as suas tarefas. Porém, debaixo da sua superfície leve e intuitiva, é pleno de potencialidades. Como tal, está à vontade para escolher as formas de o utilizar, da forma que necessita e na altura em que necessitar.</p>
+                </div>
+            </div>
+            <div className="download-content">
+                <div className="download-text">
+                    <h2>Baixe e experimente Agora mesmo !</h2>
+                    <div className="line">.</div>
+                    <p>Kubuntu é uma alternativa gratuita, completa e de código aberto ao Microsoft Windows e Mac OS X que contém tudo que você precisa para trabalhar, jogar ou compartilhar. Confira o Tour dos recursos se quiser saber mais!
+                    O Kubuntu une o Ubuntu com o KDE e o fabuloso Plasma desktop, trazendo a você um conjunto completo de aplicativos. A instalação inclui aplicativos de produtividade, escritório, e-mail, gráficos, fotografia e música prontos para uso na inicialização.</p>
+                </div>
+                <Image src={Download} alt="download" width={'500px'} height={'500px'}/>
             </div>
         </Scaffold>
     </Container>
